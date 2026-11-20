@@ -1,0 +1,36 @@
+﻿@model IEnumerable<FoodHub.Models.Restourants>
+@{
+    ViewData["Title"] = "Restaurants";
+}
+<h2>Restaurants</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Image URL</th>
+            <th>Is Active</th>
+            <th>Created At</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var restaurant in Model)
+        {
+            <tr>
+                <td>@restaurant.Id</td>
+                <td>@restaurant.Name</td>
+                <td>@restaurant.Description</td>
+                <td>@restaurant.Address</td>
+                <td>@restaurant.PhoneNumber</td>
+                <td>@restaurant.ImageUrl</td>
+                <td>@restaurant.IsActive</td>
+                <td>@restaurant.CreatedAt</td>
+            </tr>
+        }
+    </tbody>
+</table>
